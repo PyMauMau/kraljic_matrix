@@ -21,3 +21,21 @@ volatility_annual = volatility_daily * np.sqrt(252)
 
 # Exibir o resultado
 print(f'Volatilidade anualizada: {volatility_annual:.4f}')
+
+
+# outro exemplo - a volatilidade utilizada na matriz kraljic é a volatilidade (desvio-padrão) #
+
+# Exemplo de preços de um produto ao longo de 30 dias
+precos = [100, 102, 98, 101, 99, 105, 103, 102, 104, 100, 
+          98, 97, 95, 100, 101, 102, 100, 99, 101, 100,
+          103, 104, 106, 107, 105, 102, 100, 101, 102, 103]
+
+# Calcular a média dos preços
+media_precos = np.mean(precos)
+
+# Calcular o desvio padrão (volatilidade)
+volatilidade = np.std(precos)
+
+# Exibir resultados
+media_precos, volatilidade
+
